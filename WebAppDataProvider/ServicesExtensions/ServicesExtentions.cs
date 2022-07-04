@@ -41,6 +41,7 @@ namespace WebAppDataProvider
             services.AddScoped<IOrderDetailDataProvider, OrderDetailDataProvider>();
             services.AddScoped<IOrderDataProvider, OrderDataProvider>();
             services.AddScoped<IProductDataProvider, ProductDataProvider>();
+            services.AddDbContext<FStoreDBContext>();
         }
         #endregion
     }
