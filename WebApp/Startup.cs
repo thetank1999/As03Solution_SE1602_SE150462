@@ -7,13 +7,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebAppDataProvider;
 
 namespace WebApp
 {
     public class Startup
     {
         public Startup(IConfiguration configuration) {
-            Configuration = configuration;
+            this.Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -21,6 +22,13 @@ namespace WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllersWithViews();
+            services.AddMvc();
+            services.AddSession();
+            services.AddDataProviders(this.Configuration);
+
+            var adminAccount = new AdminAccount();
+            this.Configuration.GetSection("AdminAccount").Bind(adminAccount);
+            services.AddSingleton<AdminAccount>(adminAccount);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,6 +38,7 @@ namespace WebApp
             } else {
                 app.UseExceptionHandler("/Home/Error");
             }
+            app.UseSession();
             app.UseStaticFiles();
 
             app.UseRouting();
