@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -12,8 +13,10 @@ namespace WebAppSqlServerDataProvider.Models
             OrderDetails = new HashSet<OrderDetail>();
         }
 
+        [Required]
         public int OrderId { get; set; }
         public int? MemberId { get; set; }
+        [Required]
         public DateTime OrderDate { get; set; }
         public DateTime? RequiredDate { get; set; }
         public DateTime? ShippedDate { get; set; }
