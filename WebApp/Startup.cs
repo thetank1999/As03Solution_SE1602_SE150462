@@ -20,7 +20,7 @@ namespace WebApp
             services.AddControllersWithViews();
             services.AddSession();
             services.AddDataProviders(this.Configuration);
-
+            services.AddRazorPages();
             var adminAccount = new AdminAccount();
             this.Configuration.GetSection("AdminAccount").Bind(adminAccount);
             services.AddSingleton<AdminAccount>(adminAccount);
@@ -44,6 +44,7 @@ namespace WebApp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

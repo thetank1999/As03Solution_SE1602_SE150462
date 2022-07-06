@@ -1,0 +1,73 @@
+﻿@page
+@using WebAppDataProvider
+@model WebAppSqlServerDataProvider.Models.Order
+@inject IOrderDetailDataProvider _orderDetailDataProvider
+@{
+    
+    //var id = @Html.Model.OrderId;
+    //var orderDetailList = _orderDetailDataProvider.FilterOrderDetailListByOrderId(id);
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RequiredDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RequiredDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ShippedDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ShippedDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Freight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Freight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Member)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Member.Email)
+        </dd>
+    </dl>
+    <h3>Order Detail List</h3>
+    
+@*</div>
+<tr class="row">
+        @{
+            foreach(var orderDetail in orderDetailList) {
+            <td>
+               @orderDetail.Product.ProductName
+            </td>
+            <td>
+                @orderDetail.Quantity
+            </td>
+            <td>
+                @orderDetail.UnitPrice
+            </td>
+            <td>
+                @orderDetail.Discount
+            </td>
+            }
+        
+        }
+    </tr>
+<div>*@
+    <a asp-action="Index">Back to List</a>
+</div>

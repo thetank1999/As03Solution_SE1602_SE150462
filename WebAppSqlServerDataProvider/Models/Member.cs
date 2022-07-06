@@ -27,5 +27,9 @@ namespace WebAppSqlServerDataProvider.Models
         public string Password { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
+
+        public override string ToString() {
+            return this.Email.ToString();
+        }
     }
 }
