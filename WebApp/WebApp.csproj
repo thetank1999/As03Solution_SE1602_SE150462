@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Member\" />
     <Folder Include="Views\Category\" />
     <Folder Include="Views\Order\" />
   </ItemGroup>

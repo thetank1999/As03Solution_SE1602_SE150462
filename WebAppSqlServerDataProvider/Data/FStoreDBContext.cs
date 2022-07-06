@@ -62,11 +62,16 @@ namespace WebAppSqlServerDataProvider.Data
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
+                //entity.HasIndex(e => e.Email).IsUnique();
+
                 entity.Property(e => e.Password)
                     .IsRequired()
                     .HasMaxLength(30)
                     .IsUnicode(false);
+
             });
+
+            //modelBuilder.Entity<Member>().HasIndex(e => e.Email).IsUnique();
 
             modelBuilder.Entity<Order>(entity =>
             {
