@@ -67,6 +67,7 @@ namespace WebApp.Controllers
         [HttpGet]
         public IActionResult Logout() {
             HttpContext.Session.Remove("UserType");
+            HttpContext.Session.Remove("UserId");
             return RedirectToAction("Index");
         }
     }

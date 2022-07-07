@@ -5,15 +5,19 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{64B3561A-515B-40FB-B3FE-3994CC0B6537}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{10631426-8368-48BC-91F6-E2ACDEFA79BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{10631426-8368-48BC-91F6-E2ACDEFA79BB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAppDataProvider", "WebAppDataProvider", "{048AE5DC-EEF7-4024-BC3C-C65714DE01D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppDataProvider", "WebAppDataProvider\WebAppDataProvider.csproj", "{47ABA25C-BFD5-43B0-8699-713B4ABF8E80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppDataProvider", "WebAppDataProvider\WebAppDataProvider.csproj", "{47ABA25C-BFD5-43B0-8699-713B4ABF8E80}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAppSqlServerDataProvider", "WebAppSqlServerDataProvider", "{267E36E6-6595-4191-881D-10CD8BE46D71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppSqlServerDataProvider", "WebAppSqlServerDataProvider\WebAppSqlServerDataProvider.csproj", "{A6A4E4D0-C5FE-47EE-87F8-AA6564493622}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppSqlServerDataProvider", "WebAppSqlServerDataProvider\WebAppSqlServerDataProvider.csproj", "{A6A4E4D0-C5FE-47EE-87F8-AA6564493622}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAppViewModelProvider", "WebAppViewModelProvider", "{E4D0C662-D2EB-4A30-A48F-4CB16C96F10D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppViewModelProvider", "WebAppViewModelProvider\WebAppViewModelProvider.csproj", "{A390C837-D4AC-4F40-A3CA-29B6B70D1AC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{A6A4E4D0-C5FE-47EE-87F8-AA6564493622}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6A4E4D0-C5FE-47EE-87F8-AA6564493622}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6A4E4D0-C5FE-47EE-87F8-AA6564493622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A390C837-D4AC-4F40-A3CA-29B6B70D1AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A390C837-D4AC-4F40-A3CA-29B6B70D1AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A390C837-D4AC-4F40-A3CA-29B6B70D1AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A390C837-D4AC-4F40-A3CA-29B6B70D1AC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 		{10631426-8368-48BC-91F6-E2ACDEFA79BB} = {64B3561A-515B-40FB-B3FE-3994CC0B6537}
 		{47ABA25C-BFD5-43B0-8699-713B4ABF8E80} = {048AE5DC-EEF7-4024-BC3C-C65714DE01D5}
 		{A6A4E4D0-C5FE-47EE-87F8-AA6564493622} = {267E36E6-6595-4191-881D-10CD8BE46D71}
+		{A390C837-D4AC-4F40-A3CA-29B6B70D1AC2} = {E4D0C662-D2EB-4A30-A48F-4CB16C96F10D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78619E63-2472-46B8-AD3E-777CAE798BD6}
