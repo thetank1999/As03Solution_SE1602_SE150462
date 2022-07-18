@@ -49,7 +49,7 @@ namespace WebApp.Controllers
                         return RedirectToAction("OrderByMember", "Order");
                     } else {
                         ViewBag.error = "Invalid Email Address or Password.";
-                        return Index();
+                        return RedirectToAction("Index");
                     }
                 } return View();
             } catch (Exception ex) {
